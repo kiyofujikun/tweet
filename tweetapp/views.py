@@ -18,7 +18,7 @@ def signupfunc(request):
             return render(request, 'signup.html', {'error':'このユーザーは登録されています'})
         except:
             user = User.objects.create_user(username2, '', password2)
-            return render(request, 'signup.html', {'some':100})
+            return render(request, 'login.html', {'some':100})
     return render(request, 'signup.html', {'some': 100})
 
 def loginfunc(request):
